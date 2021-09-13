@@ -20,3 +20,7 @@
 .icones {
     vertical-align: middle;
 }
+
+.placar {
+    display: none;
+}

@@ -54,8 +54,6 @@ function inicializaMarcadores(){
     campo.on("input", function(){
     var digitado = campo.val();
     var comparavel = frase.substr(0, digitado.length);
-    console.log("digitado: " + digitado);
-    console.log("Frase C..:  " + comparavel);
 
     if(digitado == comparavel){
         campo.addClass("campo-correto");
@@ -68,17 +66,6 @@ function inicializaMarcadores(){
 });
 }
 
-function inserePlacar(){
-    var corpoTabela = $(".placar").find("tbody");
-    var usuario = "Thiago";
-    var numPalavras = $("#contador-palavras").text();
-    
-    var linha = "<tr>"+
-                    "<td>"+ usuario + "</td>"+
-                    "<td>"+ numPalavras + "</td>"+
-                "</tr>";
-    corpoTabela.prepend(linha);
-}
 
 
 function reiniciaJogo(){
@@ -92,3 +79,4 @@ function reiniciaJogo(){
     campo.removeClass("campo-correto");
     campo.removeClass("campo-incorreto")
 }
+
