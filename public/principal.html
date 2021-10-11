@@ -5,13 +5,22 @@
     <title>Improve your typing</title>
     <link rel="stylesheet" href="css/libs/materialize.min.css">
     <link rel="stylesheet" href="css/libs/google-fonts.css">
+    <link rel="stylesheet" href="css/libs/selectize.default.css">
     <link rel="stylesheet" href="css/estilos.css">
+    <link rel="stylesheet" href="css/libs/tooltipster.bundle.min.css">
+
+   
+   
 </head>
 <body>
     <div class="container">
         <h1 class="center">Alura Typer</h1>
         <p class="frase center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus aut suscipit quia quas asperiores doloremque, ipsum assumenda illo sequi laboriosam officia id maxime fugiat provident, maiores eum. Minima, suscipit</p>
 
+        <div class="center">
+            <img src="img/spinner.gif" alt="spinner" id="spinner"></img>
+            <p id="erro">Ocorreu um erro, por favor tente novamente.</p>
+        </div>
         <ul class="informacoes">
             <li>
                 <i class="small material-icons icones">description</i>
@@ -23,14 +32,35 @@
             </li>
         </ul>
         <textarea class="campo-digitacao" name="" id="" cols="30" rows="10"></textarea>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="botoes">
+                    <a class="btn-floating btn-large waves-effect waves-light red" id="botao-reiniciar"><i class="material-icons">restore</i></a>
+                </div>
+                <div class="botoes">
+                    <a class="btn-floating btn-large waves-effect waves-light green" id="botao-placar"><i class="material-icons">assignment</i></a>
+                </div>
+                <div class="botoes">
+                    <a class="btn-floating btn-large waves-effect waves-light blue" id="botao-frase"><i class="material-icons">shuffle</i></a>
+                </div> 
+                <div class="botoes">
+                    <a class="btn-floating btn-large waves-effect waves-light purple" id="botao-frase-id"><i class="material-icons">search</i></a>
+                    <input type="number" id="frase-id" min="0">  
+                </div>
+                <div class="botoes">
+                    <a class="btn-floating btn-large waves-effect waves-light tooltip yellow"title="Sincronizado com sucesso!" id="botao-sync"><i class="material-icons">swap_vert</i></a>
+                </div>
 
-        <div class="botoes">
-            <a class="btn-floating btn-large waves-effect waves-light red" id="botao-reiniciar"><i class="material-icons">restore</i></a>
+            </div>
+            <div class="select-usuarios">
+                <select name="" id="usuarios">
+                    <option value="Douglas">Douglas</option>
+                    <option value="Thiago">Thiago</option>
+                    <option value="Pamela">Pamela</option>
+                </select>
+            </div>     
         </div>
-        <div class="botoes">
-            <a class="btn-floating btn-large waves-effect waves-light green" id="botao-placar"><i class="material-icons">assignment</i></a>
-        </div>
-
+        
         <ul class="center">
             <li><span id="contador-caracteres">0</span> Caracteres</li>
             <li><span id="contador-palavras">0</span> Palavras</li>
@@ -56,5 +86,8 @@
     <script src="js/jquery.js"></script>
     <script src="js/main.js"></script>
     <script src="js/placar.js"></script>
+    <script src="js/frase.js"></script>
+    <script src="js/selectize.js"></script>
+    <script src="js/tooltipster.bundle.min.js"></script>
 </body>
 </html>

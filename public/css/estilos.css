@@ -1,3 +1,9 @@
+.row .botoes {
+    display: inline-block;
+}
+/* .row .botoes:nth-child(4) {
+    background-color: rgb(53, 0, 245);
+} */
 .campo {
     font-size: 20px;
     height: 150px;
@@ -23,4 +29,27 @@
 
 .placar {
     display: none;
+}
+#erro {
+    color: red;
+    display: none;
+}
+
+#spinner {
+    display: none;
+}
+
+#frase-id {
+    width: 50px;
+}
+
+.select-usuarios {
+    display: inline-block;
+}
+
+#usuarios {
+    display: block;
+}
+.selectize-input {
+    width: 150px;
 }
